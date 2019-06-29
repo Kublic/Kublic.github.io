@@ -4,6 +4,9 @@
     <title><![CDATA[使用Hexo+Github搭建一篇博客(超详细)]]></title>
     <url>%2F2019%2F06%2F28%2F%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2-%E8%B6%85%E8%AF%A6%E7%BB%86%2F</url>
     <content type="text"><![CDATA[前言在使用Hexo+Github搭建博客时，你必须需要: Git Node.js Github账号 安装Git与Node.jsGit安装好后，随便右击一个文件夹会出现Git GUI Here和Git Bash Here,如下图所示: 安装好Node.js与配置好Node.js环境时，可以在cmd中输入 12node -vnpm -v 如果出现如下所示 则表示安装成功。 创建Github仓库注册好github账号后,在主页面单击”New”创建一个新的仓库 在”Repository name“中必须严格遵守”用户名.github.io“的形式，第一次搭建博客，避免不必要的麻烦，就这样去命名。然后在”Initialize this repository with a README“上打上勾,其余的配置就不用去理会了，单击”Create repository“,如下图: 配置SSH Key为什么需要配置这个呢?因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。 $ cd ~/.ssh #检查本地本机已存在的密钥 如果提示:No such file or directory 说明你是第一次使用git,则使用以下命令。 ssh-keygen -t rsa -C “邮件地址” #创建ssh密钥 连续3次回车后，那么在你用户的文件夹下就会多了一个.ssh的文件夹,找到.ssh下的id_rsa.pub文件，把里面的内容复制下来，打开你的个人设置 -SSH and GPG keys -&gt; New SSH key： 把内容复制到Key中，Title随意取，设置完后点击Add SSH Key,保存。 测试是否成功在刚刚的.ssh文件夹上右击 -&gt; Git Bash Here,输入 $ ssh -T git@github.com 如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到： Hi 你的用户名! You’ve successfully authenticated, but GitHub does not provide shell access. 出现这个，就代表SSH配置成功了。 此时你还需要配置： $ git config –global user.name “xxx”// 你的github用户名，非昵称 $ git config –global user.email “xxx@xx.com“// 填写你的github注册邮箱 现在就可以开始部署博客了。 安装Hexo使用Git Bash Here输入 npm install -g hexo 初始化在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是E:\Hexo，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。 hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图： $ hexo g # 生成 $ hexo s # 启动服务 执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的(这是我配置过东西的public文件，刚开始的时候可能没有这么多)： 这个时候我们使用hexo s命令，就可以启动服务，在浏览器地址中输入,localhost:4000便可以看见运行界面了 运行界面如下 现在，使用你的github用户名.github.io,也可以访问到这个页面了。到这里，博客也算部署完成了，接下来就是博客美化了。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
       <tags>
         <tag>技术</tag>
       </tags>
