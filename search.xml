@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[使用Hexo+Github搭建一篇博客(超详细)]]></title>
     <url>%2F2019%2F06%2F28%2F%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2-%E8%B6%85%E8%AF%A6%E7%BB%86%2F</url>
-    <content type="text"><![CDATA[前言在使用Hexo+Github搭建博客时，你必须需要: Git Node.js Github账号 安装Git与Node.jsGit安装好后，随便右击一个文件夹会出现Git GUI Here和Git Bash Here,如下图所示: 安装好Node.js与配置好Node.js环境时，可以在cmd中输入 12node -vnpm -v 如果出现如下所示 则表示安装成功。 创建Github仓库注册好github账号后,在主页面单击”New”创建一个新的仓库]]></content>
+    <content type="text"><![CDATA[前言在使用Hexo+Github搭建博客时，你必须需要: Git Node.js Github账号 安装Git与Node.jsGit安装好后，随便右击一个文件夹会出现Git GUI Here和Git Bash Here,如下图所示: 安装好Node.js与配置好Node.js环境时，可以在cmd中输入 12node -vnpm -v 如果出现如下所示 则表示安装成功。 创建Github仓库注册好github账号后,在主页面单击”New”创建一个新的仓库 在”Repository name“中必须严格遵守”用户名.github.io“的形式，第一次搭建博客，避免不必要的麻烦，就这样去命名。然后在”Initialize this repository with a README“上打上勾,其余的配置就不用去理会了，单击”Create repository“,如下图:]]></content>
       <tags>
         <tag>技术</tag>
       </tags>
