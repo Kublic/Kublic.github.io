@@ -9,4 +9,4 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /lib/
 
-Sitemap: kublic.github.io/sitemap.xml
+Sitemap: kublic.coding.me/sitemap.xml
